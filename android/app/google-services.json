@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "85476874148",
+    "project_id": "tunemoon-77761",
+    "storage_bucket": "tunemoon-77761.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85476874148:android:f33f905b52a9a6e91a5331",
+        "android_client_info": {
+          "package_name": "com.example.tunemoon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "85476874148-g75jt10rs3nq8vmtr5ionokggq0p0e7n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tunemoon",
+            "certificate_hash": "2efb7ede6914d9cb11804e62011a6f894e768b12"
+          }
+        },
+        {
+          "client_id": "85476874148-njpv2s4f6poqaeapp8s8eij9knvpq6t4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByKRjG9wHJLxz5yzJ1EcQC6sFHVcatOHg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "85476874148-njpv2s4f6poqaeapp8s8eij9knvpq6t4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
