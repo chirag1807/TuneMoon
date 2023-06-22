@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tunemoon/BLoCs/SearchMusicBLoC/SearchMusicEvent.dart';
 import 'package:tunemoon/BLoCs/SearchMusicBLoC/SearchMusicState.dart';
 import 'package:http/http.dart' as http;
+import 'package:tunemoon/config.dart';
 import 'package:tunemoon/model/SearchMusicDataClass.dart';
 
 class SearchMusicBLoC extends Bloc<SearchMusicEvent, SearchMusicState>{
@@ -16,7 +17,7 @@ class SearchMusicBLoC extends Bloc<SearchMusicEvent, SearchMusicState>{
       String keyword = event.keyword;
       emit(SearchMusicLoadingState());
       try{
-        var baseUrl = "https://tunemoon-api.vercel.app/music";
+        var baseUrl = "$apiBaseUrl/music";
         Uri url = Uri.parse("$baseUrl/bySearch?search=$keyword");
         var response = await http.get(url);
         if(response.statusCode == 200){

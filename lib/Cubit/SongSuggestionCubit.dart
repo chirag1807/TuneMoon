@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tunemoon/Cubit/SongSuggestionState.dart';
 import 'package:tunemoon/model/SearchMusicDataClass.dart';
 import 'package:http/http.dart' as http;
+import 'package:tunemoon/config.dart';
 
 class SongSuggestionCubit extends Cubit<SongSuggestionState> {
   SongSuggestionCubit() : super(SongSuggestionLoadingState()) {
@@ -28,7 +29,7 @@ class SongSuggestionCubit extends Cubit<SongSuggestionState> {
       String actor1 = sp.getString("actor1") ?? "Shahrukh Khan";
       String actor2 = sp.getString("actor2") ?? "Akshay Kumar";
 
-      var baseUrl = "https://tunemoon-api.vercel.app/music";
+      var baseUrl = "$apiBaseUrl/music";
       Uri url = Uri.parse(
           "$baseUrl/suggestionSearch?singer1=$singer1&singer2=$singer2&actor1=$actor1&actor2=$actor2");
       var response = await http.get(url);

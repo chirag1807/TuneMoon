@@ -13,6 +13,7 @@ import 'package:tunemoon/Screens/BottomNavPortion/BottomNavBar.dart';
 import 'package:tunemoon/model/SelectArtistDataClass.dart';
 import 'package:tunemoon/model/UserPostDetails.dart';
 import 'package:http/http.dart' as http;
+import 'package:tunemoon/config.dart';
 
 class SelectArtistScreen extends StatefulWidget {
   const SelectArtistScreen({Key? key}) : super(key: key);
@@ -237,7 +238,7 @@ class _SelectArtistScreenState extends State<SelectArtistScreen> {
   }
 
   Future<void> postUserData(UserPostDetails userPostDetails) async {
-    var baseUrl = "https://tunemoon-api.vercel.app";
+    var baseUrl = apiBaseUrl;
     Uri url = Uri.parse("$baseUrl/user");
     var response = await http.post(url,
       headers: {
@@ -245,7 +246,5 @@ class _SelectArtistScreenState extends State<SelectArtistScreen> {
       },
         body: jsonEncode(userPostDetails.toMap()),
     );
-    print(response.statusCode);
-    print(response.body);
   }
 }
